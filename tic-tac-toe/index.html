@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./game.css" />
+    <title>Tic Tac Toe</title>
+    <script src="./js/game.js"></script>
+  </head>
+  <body>
+    <main>
+      <div>
+        <p>Result: <span id="result"></span></p>
+        <button onclick="javascript: location.reload()">restart</button>
+      </div>
+      <div class="container">
+        <div class="board">
+          <div class="cell" id="00" onclick="move(this)"></div>
+          <div class="cell" id="01" onclick="move(this)"></div>
+          <div class="cell" id="02" onclick="move(this)"></div>
+          <div class="cell" id="10" onclick="move(this)"></div>
+          <div class="cell" id="11" onclick="move(this)"></div>
+          <div class="cell" id="12" onclick="move(this)"></div>
+          <div class="cell" id="20" onclick="move(this)"></div>
+          <div class="cell" id="21" onclick="move(this)"></div>
+          <div class="cell" id="22" onclick="move(this)"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
