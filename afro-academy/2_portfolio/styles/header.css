@@ -1,0 +1,32 @@
+.header {
+  padding: 1rem 0;
+  max-width: 1136px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.header nav a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.5s;
+}
+.header nav a:hover {
+  color: var(--primary);
+}
+
+.header nav a + a {
+  margin-left: 1rem;
+}
+
+.logo {
+  margin: 0;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.logo span {
+  color: var(--primary);
+}
