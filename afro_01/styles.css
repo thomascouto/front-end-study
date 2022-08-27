@@ -1,0 +1,57 @@
+body {
+  background-color: whitesmoke;
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+}
+
+img {
+  border-radius: 50%;
+  width: 25%;
+}
+
+.avatar {
+  text-align: center;
+}
+
+.content {
+  text-align: center;
+  padding: 10px;
+}
+
+.head {
+  font-weight: bolder;
+}
+
+article {
+  height: 100%;
+  width: 100%;
+  margin: 1rem auto;
+  max-width: 50rem;
+}
+
+.article {
+  margin: 10px;
+  text-align: justify;
+}
+
+.article ul {
+  list-style: none;
+}
+
+.article li {
+  display: inline;
+}
+
+.article i {
+  font-size: 5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: red;
+}
