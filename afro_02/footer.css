@@ -1,0 +1,10 @@
+footer {
+  background-image: radial-gradient(#000 0.01%, transparent 15%);
+  background-size: 0.6em 0.6em;
+  background-position: 0 0, 30px 30px;
+  background-repeat: repeat;
+  align-self: flex-end;
+  justify-self: flex-end;
+  height: 9em;
+  width: 9em;
+}

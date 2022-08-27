@@ -1,0 +1,15 @@
+header {
+  align-self: flex-end;
+  padding-top: 1em;
+  padding-right: 3em;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--link);
+  font-weight: 500;
+}
+
+header nav a + a {
+  margin-left: 1.5rem;
+}
