@@ -4,12 +4,20 @@
   --secondary: #0c2026;
   --text: #5f5f5f;
   --border: #b8b8b8;
+  --link: #333;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 87.5%;
+  }
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* font-size: 16px; */
 }
 
 body,
@@ -17,4 +25,10 @@ button {
   font-family: "Inter", sans-serif;
   /* font-family: "Roboto", sans-serif;
   font-family: "Source Code Pro", monospace; */
+}
+
+main {
+  /* padding: 1rem; */
+  margin: 0 auto;
+  max-width: calc(1136px + 2rem);
 }
