@@ -1,19 +1,16 @@
 .greeting {
-  border: 1px solid red;
   height: calc(100vh - 5rem);
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .dev-info h1 {
-  margin: 0;
   font-size: 3rem;
 }
 
-.dev-info h1 span {
+span {
   color: var(--primary);
-  font-size: 2rem;
 }
 
 .dev-info a {
@@ -36,7 +33,6 @@
   font-size: 1.25rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  color: var(--text);
 }
 
 .dev-img {
