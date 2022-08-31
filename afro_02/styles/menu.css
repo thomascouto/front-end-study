@@ -1,0 +1,22 @@
+header {
+  align-self: flex-end;
+  padding-top: 1rem;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--link);
+  font-weight: 500;
+}
+
+header nav a + a {
+  margin-left: 1.5rem;
+}
+
+header nav a:last-child {
+  padding-right: 1.5em;
+}
+
+.btn {
+  margin-top: 4em;
+}

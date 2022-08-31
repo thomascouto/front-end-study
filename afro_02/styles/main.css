@@ -1,0 +1,59 @@
+.main-grid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 2fr 3fr;
+}
+
+.grid-img {
+  background: url("../img/img.png") no-repeat;
+  object-fit: cover;
+  max-height: 100vh;
+}
+
+.grid-content {
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: 3rem;
+}
+
+.btn-download {
+  color: var(--bg);
+  background-color: var(--link);
+  padding: 0.8em 3em;
+  border: 2px solid var(--link);
+  border-radius: 0.5em;
+  transition: 0.2s;
+}
+
+.btn-signin {
+  color: var(--link);
+  border: 2px solid var(--link);
+  padding: 0.8em 3em;
+  border-radius: 0.5em;
+  transition: 0.2s;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.btn-signin:hover {
+  background-color: var(--link);
+  color: var(--bg);
+}
+
+section {
+  margin-top: 8rem;
+  height: auto;
+}
+
+section h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  max-width: 18rem;
+}
+
+section p {
+  font-size: 1.15rem;
+  font-weight: 300;
+  max-width: 30rem;
+  color: rgba(0, 0, 0, 0.6);
+}
