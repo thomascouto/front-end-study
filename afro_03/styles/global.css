@@ -14,17 +14,16 @@
   }
 }
 
-* {
+html,
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 body,
 button {
   font-family: "Inter", sans-serif;
-  /* font-family: "Roboto", sans-serif;
-  font-family: "Source Code Pro", monospace; */
 }
 
 main {
@@ -33,10 +32,11 @@ main {
   max-width: calc(1136px + 2rem);
 }
 
-h2 {
+h3 {
   font-size: 2.5rem;
 }
 
 p {
   color: var(--text);
+  font-size: 1.25rem;
 }
