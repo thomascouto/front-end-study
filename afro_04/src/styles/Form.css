@@ -1,0 +1,29 @@
+.content-form {
+  display: flex;
+  flex-direction: row;
+  padding-top: 2rem;
+}
+
+.content-form input[type="text"] {
+  border: 1px solid var(--blue-border);
+  border-radius: 8px;
+  height: 3.18rem;
+  font-family: "Inter";
+  font-size: 1rem;
+  text-indent: 1rem;
+  margin-right: 0.5rem;
+  flex: 1;
+}
+
+.content-form input[type="text"]:hover {
+  border: 1px solid var(--main-green);
+}
+
+.content-form input[type="button"] {
+  background: var(--main-green) url("../assets/plus.svg") no-repeat 50%;
+  border: 1px solid var(--main-green);
+  border-radius: 8px;
+  width: 3.4rem;
+  height: 3.4rem;
+  cursor: pointer;
+}
