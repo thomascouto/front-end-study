@@ -23,7 +23,7 @@ function SingleElement({ item, position, removeItem }: SingleElementProps) {
   };
 
   const handleBlur = (e: React.FocusEvent<HTMLTextAreaElement, Element>) => {
-    console.log(e.target.value);
+    console.log(e.target.value); //set new text
     setEdit(false);
   };
 
@@ -34,6 +34,10 @@ function SingleElement({ item, position, removeItem }: SingleElementProps) {
         <textarea
           rows={4}
           onBlur={handleBlur}
+          onFocus={(e) => {
+            e.target.selectionStart = e.target.textContent?.length as number;
+            e.target.selectionEnd = e.target.textContent?.length as number;
+          }}
           defaultValue={item.text}
           autoFocus
         />
