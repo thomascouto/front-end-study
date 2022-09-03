@@ -25,9 +25,10 @@ const Form = ({ addItem }: FormProps) => {
         type={"text"}
         value={text}
         placeholder={"Insira uma nova atividade"}
-        onChange={(e) => setText(e.target.value)}
+        onChange={({ target }) => setText(target.value)}
         onKeyDown={handleKeyboard}
         required
+        autoFocus
       />
       <input type={"button"} onClick={send}></input>
     </div>

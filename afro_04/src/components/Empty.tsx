@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import empty from "../assets/checklist.svg";
 import "../styles/Empty.css";
 
