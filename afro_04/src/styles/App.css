@@ -8,8 +8,15 @@
 }
 
 p,
-h3 {
+h3,
+input,
+textarea {
   font-family: "Inter", sans-serif;
+}
+
+textarea {
+  font-size: 1rem;
+  overflow: auto;
 }
 
 .header {

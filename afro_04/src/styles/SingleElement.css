@@ -8,10 +8,19 @@
   align-items: center;
 }
 
-.element-item p {
+.element-item p,
+textarea {
   flex: 1;
   font-weight: 400;
-  font-size: 0.875rem;
+}
+
+.element-item textarea {
+  border: none;
+  background-color: #f3f3f3;
+}
+
+textarea:focus {
+  outline: none;
 }
 
 .element-item input[type="checkbox"] {
