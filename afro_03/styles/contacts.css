@@ -1,0 +1,53 @@
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.contacts a {
+  display: flex;
+  height: 3rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: var(--background);
+  text-decoration: none;
+  position: relative;
+}
+
+.contacts a:hover {
+  filter: brightness(125%);
+}
+
+.contacts a img {
+  position: absolute;
+  left: 1rem;
+}
+
+@media screen and (max-width: 976px) {
+  .contacts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 489px) {
+  .contacts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.wpp {
+  background-color: #25d366;
+}
+
+.inn {
+  background-color: #0e76a8;
+}
+
+.git {
+  background-color: #171515;
+}
+
+.mail {
+  background-color: #ea4335;
+}

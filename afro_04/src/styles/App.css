@@ -1,0 +1,48 @@
+:root {
+  --blue-border: #c8e6d2;
+  --gray: #4f4f4f;
+  --gray-text: #707070;
+  --gray900-text: #0f0a0a;
+  --sec-green: #70ae6e;
+  --main-green: #466e45;
+}
+
+p,
+h3,
+input,
+textarea {
+  font-family: "Inter", sans-serif;
+}
+
+textarea {
+  font-size: 1rem;
+  overflow: auto;
+}
+
+.header {
+  text-align: center;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4.5rem;
+  font-family: "Mitr", sans-serif;
+  background-color: var(--sec-green);
+  color: white;
+}
+
+.header img {
+  margin-right: 0.5rem;
+}
+
+.content {
+  margin: 0 auto;
+  height: calc(100vh - 4.5rem);
+  width: 46rem;
+}
+
+.elements-container h3 {
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin-top: 2rem;
+}
