@@ -17,11 +17,13 @@
 }
 
 .btn {
+  display: inline-block;
+  background-color: red;
   margin-top: 4em;
 }
 
 .btn a {
-  border-radius: 0.5em;
+  border-radius: 0.5rem;
   transition: 0.2s;
   padding: 0.8em 3em;
   border: 0.1rem solid var(--link);
@@ -40,6 +42,18 @@
 .btn-signin:hover {
   background-color: var(--link);
   color: var(--bg);
+}
+
+.form-field {
+  background-color: var(--text-field-bg);
+  color: var(--text-field-text);
+  padding-left: 2.5rem;
+  min-width: 15rem;
+  /* padding-top: 1.2em; */
+  border: var(--text-field-bg);
+  /* padding-bottom: 1.2em; */
+  border-radius: 0.5rem;
+  text-align: left;
 }
 
 section {

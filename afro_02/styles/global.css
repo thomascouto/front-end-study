@@ -3,6 +3,8 @@
   --container: white;
   --link: #000;
   --black-alpha: rgba(0, 0, 0, 0.6);
+  --text-field-bg: #f0f1f6;
+  --text-field-text: #acadb1;
 }
 
 html,
