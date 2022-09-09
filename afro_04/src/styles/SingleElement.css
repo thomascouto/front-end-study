@@ -3,9 +3,24 @@
   margin-bottom: 0.25rem;
   background-color: white;
   border: 1px solid var(--blue-border);
-  border-radius: 8px;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+}
+
+.radius {
+  border-radius: 0.5rem 0 0.5rem 0;
+}
+
+.date-box {
+  flex: 1;
+  font-size: 0.7rem;
+  background: var(--sec-green);
+  background: linear-gradient(
+    90deg,
+    rgba(112, 174, 110, 0.5) 0%,
+    rgba(70, 110, 69, 1) 50%
+  );
+  padding-left: 1rem;
 }
 
 .element-item p,

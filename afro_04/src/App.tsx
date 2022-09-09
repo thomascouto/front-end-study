@@ -8,13 +8,24 @@ import "./styles/App.css";
 
 const App = () => {
   const [list, setList] = useState<Item[]>([]);
+  const [doneTasks, setDoneTasks] = useState<number>(0);
 
+  const addItem = ({ text, date }: Item) => {
+    setList((list) => [...list, { text, date, isChecked: false }]);
+  };
   const removeItem = (n: number) => {
-    setList(list.filter(({ text }) => text !== list[n].text));
+    setList((list) => list.filter((e, i) => n !== i));
   };
 
-  const addItem = ({ text }: Item) => {
-    setList((list) => [...list, { text }]);
+  const updateItemText = (n: number, newValue: string) => {
+    setList((list) => {
+      list[n].text = newValue;
+      return list;
+    });
+  };
+
+  const handleTaskCheck = (n: number, isChecked: boolean) => {
+    isChecked ? setDoneTasks(doneTasks + 1) : setDoneTasks(doneTasks - 1);
   };
 
   return (
@@ -31,13 +42,20 @@ const App = () => {
           <Empty />
         ) : (
           <div className="elements-container">
-            <h3>Tarefas concluídas</h3>
+            <h3>
+              Tarefas concluídas{" "}
+              <span>
+                {doneTasks} de {list.length}
+              </span>
+            </h3>
             {list.map((e, i) => (
               <SingleElement
                 key={i}
                 item={e}
                 position={i}
+                updateItemText={updateItemText}
                 removeItem={removeItem}
+                handleTask={handleTaskCheck}
               />
             ))}
           </div>

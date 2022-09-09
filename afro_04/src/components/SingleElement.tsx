@@ -1,35 +1,41 @@
 import React, { ChangeEvent, useState } from "react";
 import "../styles/SingleElement.css";
 import recycle from "../assets/recycle.svg";
+import editPen from "../assets/edit.svg";
 
-type TextStyle = "text-normal" | "text-line";
-
-function SingleElement({ item, position, removeItem }: SingleElementProps) {
+function SingleElement({
+  item,
+  position,
+  updateItemText,
+  removeItem,
+  handleTask,
+}: SingleElementProps) {
   const [textStyle, setTextStyle] = useState<TextStyle>("text-normal");
   const [edit, setEdit] = useState<boolean>(false);
 
   const handleCheckBox = ({ target }: ChangeEvent<HTMLInputElement>) => {
     target.checked ? setTextStyle("text-line") : setTextStyle("text-normal");
+    handleTask(position, target.checked);
   };
 
-  const handleClick = (e: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
+  const handleRemove = () => {
     removeItem(position);
   };
 
-  const handleEdit = (
-    e: React.MouseEvent<HTMLParagraphElement, MouseEvent>
-  ) => {
+  const handleEdit = () => {
     setEdit(true);
   };
 
-  const handleBlur = (e: React.FocusEvent<HTMLTextAreaElement, Element>) => {
-    console.log(e.target.value); //set new text
+  const handleBlur = ({
+    target,
+  }: React.FocusEvent<HTMLTextAreaElement, Element>) => {
+    updateItemText(position, target.value);
     setEdit(false);
   };
 
   return (
-    <div className="element-item">
-      <input type={"checkbox"} onChange={handleCheckBox} />
+    <div className="element-item radius">
+      <input id="checkbox" type={"checkbox"} onChange={handleCheckBox} />
       {edit ? (
         <textarea
           rows={4}
@@ -47,7 +53,8 @@ function SingleElement({ item, position, removeItem }: SingleElementProps) {
         </p>
       )}
 
-      <img src={recycle} onClick={handleClick} />
+      <img src={editPen} />
+      <img src={recycle} onClick={handleRemove} />
     </div>
   );
 }
