@@ -1,0 +1,40 @@
+.element-delete {
+  width: 2rem;
+  height: 2rem;
+  background: url("../../assets/recycle.svg") no-repeat center;
+}
+
+.element-delete:hover {
+  background: url("../../assets/recycle-hover.svg") no-repeat center;
+}
+
+.element-end {
+  background: url("../../assets/completed.svg") no-repeat left;
+  padding: 0 1.5rem;
+}
+
+.element-limit-date {
+  background: url("../../assets/calendar.svg") no-repeat left;
+  padding-left: 1.5rem;
+}
+
+.element-edit {
+  width: 2rem;
+  height: 2rem;
+  background: url("../../assets/edit.svg") no-repeat center;
+  margin-right: 1rem;
+}
+
+.normal-icon {
+  color: var(--gray);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.edit-icon {
+  border-radius: 8px;
+  background-color: var(--gray-100);
+  color: var(--sec-green);
+}

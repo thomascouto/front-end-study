@@ -14,27 +14,27 @@
 }
 
 .form input:nth-child(-n + 2) {
-  border: 1px solid var(--blue-border);
+  border: 1px solid var(--blue-100);
   border-radius: 8px;
   font-family: "Inter";
   font-size: 1rem;
-  color: var(--gray-text);
+  color: var(--gray-500);
   text-indent: 1rem;
 }
 
 .form input[type="button"]:hover {
-  border: 1px solid var(--sec-green);
-  background-color: var(--sec-green);
+  border: 1px solid var(--green-300);
+  background-color: var(--green-300);
 }
 
 .form input:not([type="button"]):focus {
-  outline: var(--main-green) solid 1px;
+  outline: var(--green-500) solid 1px;
 }
 
 .form input[type="button"] {
   margin-left: 0.8rem;
-  background: var(--main-green) url("../assets/plus.svg") no-repeat 50%;
-  border: 1px solid var(--main-green);
+  background: var(--green-500) url("../assets/plus.svg") no-repeat 50%;
+  border: 1px solid var(--green-500);
   border-radius: 8px;
   cursor: pointer;
 }

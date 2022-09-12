@@ -1,0 +1,12 @@
+.checked-counter {
+  border-radius: 1rem;
+  color: white;
+  padding: 0.2rem;
+  background-color: var(--gray-900);
+  border-radius: 50px;
+}
+
+div .counter {
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+}

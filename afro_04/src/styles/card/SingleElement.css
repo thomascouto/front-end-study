@@ -1,0 +1,54 @@
+.element-item {
+  padding: 1rem;
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: start;
+  justify-items: start;
+  grid-template-areas:
+    "a a a a"
+    "a a a d";
+  margin-bottom: 0.25rem;
+}
+
+.border-normal {
+  border: 1px solid var(--blue-100);
+}
+
+.border-edit {
+  border: 3px solid var(--green-300);
+}
+
+.element-item input[type="checkbox"] {
+  margin-right: 1rem;
+}
+
+.item {
+  justify-self: end;
+  grid-area: d;
+}
+
+.element-dates {
+  color: var(--gray-700);
+  font-size: 0.87rem;
+  display: flex;
+  grid-column: 1/-1;
+}
+
+.radius {
+  border-radius: 0.5rem;
+}
+
+.element-item input[type="checkbox"] {
+  height: 1.125rem;
+  width: 1.125rem;
+}
+
+.text-normal {
+  color: var(--gray-900);
+}
+
+.text-line {
+  text-decoration: line-through;
+  color: var(--gray-500);
+}
