@@ -15,7 +15,7 @@ const Form = ({ handleItem, editItem }: FormProps & EditItemProps) => {
   const send = () => {
     if (text.trim().length > 0 && date.length > 0) {
       handleItem({
-        id: Date.now(),
+        id: editItem?.id ? editItem.id : Date.now(),
         text,
         date,
         isChecked: false,

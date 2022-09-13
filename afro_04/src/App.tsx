@@ -16,8 +16,6 @@ const App = () => {
   const handleItem = ({ id, text, date, isChecked }: Item) => {
     const index = list.findIndex((e) => e.id === id);
     if (index >= 0) {
-      console.log("update!");
-
       setList((list) => {
         list[index] = {
           id,
