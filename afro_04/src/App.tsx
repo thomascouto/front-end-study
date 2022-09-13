@@ -16,6 +16,8 @@ const App = () => {
   const handleItem = ({ id, text, date, isChecked }: Item) => {
     const index = list.findIndex((e) => e.id === id);
     if (index >= 0) {
+      console.log("update!");
+
       setList((list) => {
         list[index] = {
           id,
@@ -77,7 +79,7 @@ const App = () => {
         ) : (
           <div className="elements-container">
             <CheckedTasks checkedItems={checkedTasks} arraySize={list.length} />
-            {list.map((e, i) => (
+            {list.map((e) => (
               <SingleElement
                 key={e.id}
                 item={e}
