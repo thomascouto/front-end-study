@@ -15,11 +15,11 @@ const Form = ({ handleItem, editItem }: FormProps & EditItemProps) => {
   const send = () => {
     if (text.trim().length > 0 && date.length > 0) {
       handleItem({
+        id: Date.now(),
         text,
         date,
-        isChecked: editItem?.index ? editItem.isChecked : false,
+        isChecked: false,
         isOnEdit: false,
-        index: editItem?.index,
       });
 
       setText("");

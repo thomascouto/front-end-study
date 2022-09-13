@@ -1,15 +1,14 @@
 interface Item {
+  id: number;
   text: string;
   date: string;
   isChecked: boolean;
   isOnEdit: boolean;
   endDate?: string;
-  index?: number;
 }
 
 interface SingleElementProps {
   item: Item;
-  index: number;
   loadSingleItem: (n: number) => void;
   removeItem: (n: number) => void;
   handleTask: (n: number, isChecked: boolean) => void;
