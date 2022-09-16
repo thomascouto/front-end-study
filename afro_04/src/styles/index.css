@@ -16,4 +16,13 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+<<<<<<< HEAD
+=======
+}
+
+@media screen and (max-width: 1080px) {
+  body {
+    font-size: 93.75%;
+  }
+>>>>>>> 401ba013b4d210fa1f4ef0c002fbd913814c4bc0
 }

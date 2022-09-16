@@ -13,50 +13,50 @@ const App = () => {
   const [currentItem, setCurrentItem] = useState<Item | null>(null);
   const [checkedTasks, setCheckedTasks] = useState<number>(0);
 
-  const handleItem = ({ text, date, isChecked, index }: Item) => {
-    if ((index as number) >= 0) {
+  const handleItem = ({ id, text, date, isChecked }: Item) => {
+    const index = list.findIndex((e) => e.id === id);
+    if (index >= 0) {
       setList((list) => {
-        const newItem: Item = {
+        list[index] = {
+          id,
           text,
           date,
           isChecked,
-          index,
           isOnEdit: false,
         };
-
-        list[index as number] = newItem;
         setCurrentItem(null);
         return list;
       });
     } else {
       setList((list) => [
         ...list,
-        { text, date, isChecked: false, isOnEdit: false },
+        { id, text, date, isChecked: false, isOnEdit: false },
       ]);
     }
   };
 
-  const removeItem = (n: number) => {
-    setList((list) => list.filter((e, i) => n !== i));
+  const removeItem = (id: number) => {
+    setList((list) => list.filter((e) => e.id !== id));
   };
 
-  const loadSingleItem = (n: number) => {
-    const item = list[n];
+  const loadSingleItem = (id: number) => {
+    const item = list[list.findIndex((e) => e.id == id)];
+
     item.isOnEdit = true;
-    item.index = n;
     setCurrentItem(item);
   };
 
-  const handleTaskCheck = (n: number, isChecked: boolean) => {
+  const handleTask = (id: number, isChecked: boolean) => {
     let taskSum = 0;
     setList((list) =>
-      list.map((e, i) => {
-        if (i === n) {
+      list.map((e) => {
+        if (e.id === id) {
           e.isChecked = isChecked;
           e.endDate = dateFormatter(Date.now(), "dd/MM/yyyy");
         }
         if (e.isChecked) taskSum += 1;
         setCheckedTasks(taskSum);
+
         return e;
       })
     );
@@ -77,14 +77,13 @@ const App = () => {
         ) : (
           <div className="elements-container">
             <CheckedTasks checkedItems={checkedTasks} arraySize={list.length} />
-            {list.map((e, i) => (
+            {list.map((e) => (
               <SingleElement
-                key={i}
+                key={e.id}
                 item={e}
-                index={i}
                 loadSingleItem={loadSingleItem}
                 removeItem={removeItem}
-                handleTask={handleTaskCheck}
+                handleTask={handleTask}
               />
             ))}
           </div>

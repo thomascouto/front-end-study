@@ -4,7 +4,6 @@ import "../styles/card/Icons.css";
 
 function SingleElement({
   item,
-  index,
   loadSingleItem,
   removeItem,
   handleTask,
@@ -34,20 +33,26 @@ function SingleElement({
   }, [item.isChecked]);
 
   const handleCheckBox = ({ target }: ChangeEvent<HTMLInputElement>) => {
-    handleTask(index, target.checked);
+    handleTask(item.id, target.checked);
   };
 
   const handleRemove = () => {
-    removeItem(index);
+    removeItem(item.id);
   };
 
   const handleEdit = () => {
-    loadSingleItem(index);
+    loadSingleItem(item.id);
   };
 
   return (
     <div className={`element-item radius ${editStyle.box}`}>
-      <input id="checkbox" type={"checkbox"} onChange={handleCheckBox} />
+      <input
+        id="checkbox"
+        type={"checkbox"}
+        // eslint-disable-next-line react/no-unknown-property
+        checked={item.isChecked}
+        onChange={handleCheckBox}
+      />
       <p className={textStyle}>{item.text}</p>
       <span
         className={`element-edit pointer ${editStyle.icon}`}
