@@ -1,13 +1,13 @@
-import React from "react";
-import Form from "../Input";
-import ChatCell from "./ChatCell";
+import React from 'react'
+import Form from '../Input'
+import ChatCell from './ChatCell'
 
 const Chat = () => {
-  const [chat, setChat] = React.useState<ChatContent[]>([]);
+  const [chat, setChat] = React.useState<ChatContent[]>([])
 
   const pushMessage = (msg: ChatContent) => {
-    setChat([...chat, msg]);
-  };
+    setChat([...chat, msg])
+  }
 
   return (
     <div className="app">
@@ -28,7 +28,7 @@ const Chat = () => {
         />
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default Chat;
+export default Chat
