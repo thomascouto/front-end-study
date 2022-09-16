@@ -1,0 +1,38 @@
+@import "../Colors/colors.scss";
+
+.input-form {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.input-form__input {
+  flex: 1;
+  border-radius: 20px;
+  resize: none;
+  border: 1px $teal-green-dark solid;
+  padding: 1rem;
+
+  &:hover {
+    border: 1px $light-green solid;
+  }
+
+  &:focus {
+    border: 1px $light-green solid;
+    outline: none;
+  }
+}
+
+.input-form__button {
+  border: none;
+  background: url("../images/send.svg") no-repeat center;
+  border-radius: 50%;
+  background-color: $teal-green-dark;
+  width: 4rem;
+  height: 4rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

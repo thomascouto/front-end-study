@@ -1,0 +1,38 @@
+@import "../Colors/colors.scss";
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 1rem 1rem;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  min-height: 2rem;
+  padding-left: 1rem;
+  list-style: none;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.li__span__content {
+  margin-top: 0.5rem;
+}
+
+.li__span__name {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.li__span__bold {
+  font-weight: 500;
+}
+
+.li__span__hour {
+  align-self: flex-end;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+}

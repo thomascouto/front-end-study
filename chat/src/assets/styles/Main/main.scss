@@ -1,0 +1,15 @@
+@import "../Colors/colors.scss";
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  @media screen and (max-width: 1080px) {
+    font-size: 93.75%;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 87.5%;
+  }
+}
