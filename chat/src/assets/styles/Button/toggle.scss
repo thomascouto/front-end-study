@@ -1,0 +1,43 @@
+@use './emoji';
+@import '../Colors/colors.scss';
+
+.theme-toggle {
+  background-color: $teal-green-dark;
+  position: relative;
+  width: 1.5rem;
+  height: 3.125rem;
+  border-radius: 3rem;
+  transition: 0.2s;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(110%);
+  }
+}
+
+.sun {
+  @include emoji.props(4px, 1px);
+}
+
+.moon {
+  @include emoji.props(1.75rem, 2px);
+}
+
+.theme-toggle__ball {
+  position: absolute;
+  right: 1.3px;
+  background-color: white;
+  border-radius: 50%;
+  width: 90%;
+  height: 43%;
+  transition: 0.2s;
+}
+
+.theme-toggle__ball__checked {
+  top: 1px;
+}
+
+.theme-toggle__ball__unchecked {
+  top: 1.7rem;
+}

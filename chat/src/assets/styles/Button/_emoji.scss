@@ -1,0 +1,6 @@
+@mixin props($top, $left) {
+  position: absolute;
+  transition: 0.5s;
+  top: $top;
+  left: $left;
+}

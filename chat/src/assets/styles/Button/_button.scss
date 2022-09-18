@@ -1,0 +1,15 @@
+@import '../Colors/colors.scss';
+@mixin props($width: 4rem, $height: 4rem) {
+  border: none;
+  background: url('../images/send.svg') no-repeat center;
+  border-radius: 50%;
+  background-color: $teal-green-dark;
+  width: $width;
+  height: $height;
+  transition: 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(130%);
+  }
+}

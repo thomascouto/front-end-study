@@ -11,10 +11,17 @@ body {
 .app {
   display: flex;
   flex-direction: column;
-  background: url("../images/background.png") repeat-x;
   height: 100vh;
 }
 
 .text-area {
   height: 100vh;
+}
+
+.day-theme {
+  background: url("../images/background.png") repeat-x;
+}
+
+.night-theme {
+  background: url("../images/background-night.png") repeat-x;
 }
