@@ -1,5 +1,5 @@
 interface ChatContent {
-  name: string;
-  text: string;
-  time: string;
+  user: string
+  text: string
+  time: string
 }
