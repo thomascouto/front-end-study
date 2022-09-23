@@ -1,0 +1,20 @@
+@import '../../assets/styles/Colors/colors.scss';
+
+header {
+    background-color: $gray-300;
+
+    >div {
+        p {
+            font-family: 'Montserrat', sans-serif;
+            color: $gray-900;
+            font-size: 2rem;
+            font-weight: 400;
+            padding: 1rem 0 1rem 0;
+
+            >span {
+                color: $green-500;
+                font-weight: 700;
+            }
+        }
+    }
+}
